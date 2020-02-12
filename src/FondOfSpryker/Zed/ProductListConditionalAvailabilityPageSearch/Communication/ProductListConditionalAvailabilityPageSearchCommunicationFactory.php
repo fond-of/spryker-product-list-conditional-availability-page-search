@@ -2,6 +2,7 @@
 
 namespace FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Communication;
 
+use FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Dependency\Facade\ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityFacadeInterface;
 use FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Dependency\Facade\ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityPageSearchFacadeInterface;
 use FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Dependency\Facade\ProductListConditionalAvailabilityPageSearchToEventBehaviorFacadeInterface;
 use FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\ProductListConditionalAvailabilityPageSearchDependencyProvider;
@@ -21,6 +22,18 @@ class ProductListConditionalAvailabilityPageSearchCommunicationFactory extends A
     {
         return $this->getProvidedDependency(
             ProductListConditionalAvailabilityPageSearchDependencyProvider::FACADE_CONDITIONAL_AVAILABILITY_PAGE_SEARCH
+        );
+    }
+
+    /**
+     * @throws
+     *
+     * @return \FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Dependency\Facade\ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityFacadeInterface
+     */
+    public function getConditionalAvailabilityFacade(): ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityFacadeInterface
+    {
+        return $this->getProvidedDependency(
+            ProductListConditionalAvailabilityPageSearchDependencyProvider::FACADE_CONDITIONAL_AVAILABILITY
         );
     }
 

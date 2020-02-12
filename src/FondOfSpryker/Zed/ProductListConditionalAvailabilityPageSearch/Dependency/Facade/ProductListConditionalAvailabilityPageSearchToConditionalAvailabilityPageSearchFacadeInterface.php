@@ -5,13 +5,6 @@ namespace FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Depende
 interface ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityPageSearchFacadeInterface
 {
     /**
-     * @param int[] $concreteIds
-     *
-     * @return int[]
-     */
-    public function getConditionalAvailabilityIdsByConcreteIds(array $concreteIds): array;
-
-    /**
      * @param int[] $conditionalAvailabilityIds
      *
      * @return void

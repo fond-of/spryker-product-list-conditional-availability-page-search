@@ -26,11 +26,12 @@ class ProductListProductConcreteListener extends AbstractPlugin implements Event
     public function handleBulk(array $transfers, $eventName): void
     {
         $this->preventTransaction();
+
         $concreteIds = $this->getFactory()->getEventBehaviorFacade()
             ->getEventTransferForeignKeys($transfers, SpyProductListProductConcreteTableMap::COL_FK_PRODUCT);
 
-        $conditionalAvailabilityIds = $this->getFactory()->getConditionalAvailabilityPageSearchFacade()
-            ->getConditionalAvailabilityIdsByConcreteIds($concreteIds);
+        $conditionalAvailabilityIds = $this->getFactory()->getConditionalAvailabilityFacade()
+            ->getConditionalAvailabilityIdsByProductConcreteIds($concreteIds);
 
         $this->getFactory()->getConditionalAvailabilityPageSearchFacade()->publish($conditionalAvailabilityIds);
     }
