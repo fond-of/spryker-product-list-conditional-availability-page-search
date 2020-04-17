@@ -16,6 +16,7 @@ class ProductListConditionalAvailabilityPageSearchFacade extends AbstractFacade 
      * @api
      *
      * @param \Generated\Shared\Transfer\ConditionalAvailabilityPeriodPageSearchTransfer $conditionalAvailabilityPeriodPageSearchTransfer
+     *
      * @return \Generated\Shared\Transfer\ConditionalAvailabilityPeriodPageSearchTransfer
      */
     public function expandConditionalAvailabilityPeriodPageSearchTransferWithProductLists(
