@@ -7,6 +7,15 @@
         <property name="blacklists" type="array" singular="blacklists"/>
     </transfer>
 
+    <transfer name="Customer">
+        <property name="customerProductListCollection" type="CustomerProductListCollection"/>
+    </transfer>
+
+    <transfer name="CustomerProductListCollection">
+        <property name="blacklistIds" type="int[]" singular="blacklistId"/>
+        <property name="whitelistIds" type="int[]" singular="whitelistId"/>
+    </transfer>
+
     <transfer name="PageMap">
         <property name="productLists" type="ProductListMap"/>
     </transfer>
