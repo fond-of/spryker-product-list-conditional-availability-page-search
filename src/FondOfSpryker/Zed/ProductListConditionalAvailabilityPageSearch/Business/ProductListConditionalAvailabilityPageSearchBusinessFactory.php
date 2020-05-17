@@ -21,8 +21,6 @@ class ProductListConditionalAvailabilityPageSearchBusinessFactory extends Abstra
     }
 
     /**
-     * @throws
-     *
      * @return \FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Dependency\Facade\ProductListConditionalAvailabilityPageSearchToProductListFacadeInterface
      */
     protected function getProductListFacade(): ProductListConditionalAvailabilityPageSearchToProductListFacadeInterface

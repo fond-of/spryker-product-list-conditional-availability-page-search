@@ -14,8 +14,6 @@ use Spryker\Zed\Kernel\Communication\AbstractCommunicationFactory;
 class ProductListConditionalAvailabilityPageSearchCommunicationFactory extends AbstractCommunicationFactory
 {
     /**
-     * @throws
-     *
      * @return \FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Dependency\Facade\ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityPageSearchFacadeInterface
      */
     public function getConditionalAvailabilityPageSearchFacade(): ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityPageSearchFacadeInterface
@@ -26,8 +24,6 @@ class ProductListConditionalAvailabilityPageSearchCommunicationFactory extends A
     }
 
     /**
-     * @throws
-     *
      * @return \FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Dependency\Facade\ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityFacadeInterface
      */
     public function getConditionalAvailabilityFacade(): ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityFacadeInterface
@@ -38,8 +34,6 @@ class ProductListConditionalAvailabilityPageSearchCommunicationFactory extends A
     }
 
     /**
-     * @throws
-     *
      * @return \FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Dependency\Facade\ProductListConditionalAvailabilityPageSearchToEventBehaviorFacadeInterface
      */
     public function getEventBehaviorFacade(): ProductListConditionalAvailabilityPageSearchToEventBehaviorFacadeInterface
