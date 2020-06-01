@@ -15,13 +15,13 @@
   "require": {
     "php": ">=7.1",
     "fond-of-spryker/conditional-availability":  "dev-master",
-    "fond-of-spryker/conditional-availability-page-search":  "dev-master",
-    "fond-of-spryker/conditional-availability-page-search-extension": "dev-master",
+    "fond-of-spryker/conditional-availability-page-search":  "dev-spryker_upgrade",
+    "fond-of-spryker/conditional-availability-page-search-extension": "dev-spryker_upgrade",
     "spryker/customer": "^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0",
     "spryker/event": "^1.0.0 || ^2.0.0",
     "spryker/event-behavior": "^1.0.0",
     "spryker/product-list": "^1.2.0",
-    "spryker/search": "^6.0.0 || ^7.0.0 || ^8.0.0"
+    "spryker/search": "^8.10.0"
   },
   "require-dev": {
     "spryker/code-sniffer": "^0.12",

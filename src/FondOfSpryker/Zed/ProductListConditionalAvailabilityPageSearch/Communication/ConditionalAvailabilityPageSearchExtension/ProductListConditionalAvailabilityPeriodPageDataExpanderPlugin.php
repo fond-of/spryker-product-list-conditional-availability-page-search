@@ -9,7 +9,7 @@ use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 /**
  * @method \FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Business\ProductListConditionalAvailabilityPageSearchFacadeInterface getFacade()
  */
-class ProductListPageDataExpanderPlugin extends AbstractPlugin implements ConditionalAvailabilityPeriodPageDataExpanderPluginInterface
+class ProductListConditionalAvailabilityPeriodPageDataExpanderPlugin extends AbstractPlugin implements ConditionalAvailabilityPeriodPageDataExpanderPluginInterface
 {
     /**
      * @param \Generated\Shared\Transfer\ConditionalAvailabilityPeriodPageSearchTransfer $conditionalAvailabilityPeriodPageSearchTransfer

@@ -1,6 +1,6 @@
 <?php
 
-namespace FondOfSpryker\Client\ProductListConditionalAvailabilityPageSearch\Plugin\Elasticsearch\QueryExpander;
+namespace FondOfSpryker\Client\ProductListConditionalAvailabilityPageSearch\Plugin\SearchExtension;
 
 use Codeception\Test\Unit;
 use Elastica\Query;
@@ -16,7 +16,7 @@ use Spryker\Client\Search\Dependency\Plugin\QueryInterface;
 class ProductListConditionalAvailabilityPageSearchQueryExpanderPluginTest extends Unit
 {
     /**
-     * @var \FondOfSpryker\Client\ProductListConditionalAvailabilityPageSearch\Plugin\Elasticsearch\QueryExpander\ProductListConditionalAvailabilityPageSearchQueryExpanderPlugin
+     * @var \FondOfSpryker\Client\ProductListConditionalAvailabilityPageSearch\Plugin\SearchExtension\ProductListConditionalAvailabilityPageSearchQueryExpanderPlugin
      */
     protected $productListConditionalAvailabilityPageSearchQueryExpanderPlugin;
 

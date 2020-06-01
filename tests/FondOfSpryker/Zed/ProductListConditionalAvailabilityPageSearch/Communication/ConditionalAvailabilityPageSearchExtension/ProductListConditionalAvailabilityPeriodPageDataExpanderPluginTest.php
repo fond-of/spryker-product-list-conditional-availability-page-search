@@ -6,10 +6,10 @@ use Codeception\Test\Unit;
 use FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Business\ProductListConditionalAvailabilityPageSearchFacadeInterface;
 use Generated\Shared\Transfer\ConditionalAvailabilityPeriodPageSearchTransfer;
 
-class ProductListPageDataExpanderPluginTest extends Unit
+class ProductListConditionalAvailabilityPeriodPageDataExpanderPluginTest extends Unit
 {
     /**
-     * @var \FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Communication\ConditionalAvailabilityPageSearchExtension\ProductListPageDataExpanderPlugin
+     * @var \FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Communication\ConditionalAvailabilityPageSearchExtension\ProductListConditionalAvailabilityPeriodPageDataExpanderPlugin
      */
     protected $productListPageDataExpanderPlugin;
 
@@ -38,7 +38,7 @@ class ProductListPageDataExpanderPluginTest extends Unit
 
         $this->productListPageDataExpanderPlugin = new class (
             $this->productListConditionalAvailabilityPageSearchFacadeInterfaceMock
-        ) extends ProductListPageDataExpanderPlugin {
+        ) extends ProductListConditionalAvailabilityPeriodPageDataExpanderPlugin {
             /**
              * @var \FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Business\ProductListConditionalAvailabilityPageSearchFacadeInterface
              */

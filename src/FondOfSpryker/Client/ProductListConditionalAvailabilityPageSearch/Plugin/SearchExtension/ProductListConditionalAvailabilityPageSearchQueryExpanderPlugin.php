@@ -1,17 +1,17 @@
 <?php
 
-namespace FondOfSpryker\Client\ProductListConditionalAvailabilityPageSearch\Plugin\Elasticsearch\QueryExpander;
+namespace FondOfSpryker\Client\ProductListConditionalAvailabilityPageSearch\Plugin\SearchExtension;
 
 use Elastica\Query;
 use Elastica\Query\BoolQuery;
 use Elastica\Query\Terms;
-use Generated\Shared\Search\PageIndexMap;
+use Generated\Shared\Search\ConditionalAvailabilityPeriodIndexMap;
 use Generated\Shared\Transfer\CustomerProductListCollectionTransfer;
 use Generated\Shared\Transfer\CustomerTransfer;
 use InvalidArgumentException;
 use Spryker\Client\Kernel\AbstractPlugin;
-use Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface;
-use Spryker\Client\Search\Dependency\Plugin\QueryInterface;
+use Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface;
+use Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface;
 
 /**
  * @method \FondOfSpryker\Client\ProductListConditionalAvailabilityPageSearch\ProductListConditionalAvailabilityPageSearchFactory getFactory()
@@ -19,10 +19,15 @@ use Spryker\Client\Search\Dependency\Plugin\QueryInterface;
 class ProductListConditionalAvailabilityPageSearchQueryExpanderPlugin extends AbstractPlugin implements QueryExpanderPluginInterface
 {
     /**
-     * @param \Spryker\Client\Search\Dependency\Plugin\QueryInterface $searchQuery
+     * Specification:
+     *  - Expands base query.
+     *
+     * @api
+     *
+     * @param \Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface $searchQuery
      * @param array $requestParameters
      *
-     * @return \Spryker\Client\Search\Dependency\Plugin\QueryInterface
+     * @return \Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface
      */
     public function expandQuery(QueryInterface $searchQuery, array $requestParameters = []): QueryInterface
     {
@@ -73,7 +78,7 @@ class ProductListConditionalAvailabilityPageSearchQueryExpanderPlugin extends Ab
      */
     protected function createBlacklistTermQuery(array $blacklistIds): Terms
     {
-        return new Terms(PageIndexMap::PRODUCT_LISTS_BLACKLISTS, $blacklistIds);
+        return new Terms(ConditionalAvailabilityPeriodIndexMap::PRODUCT_LISTS_BLACKLISTS, $blacklistIds);
     }
 
     /**
@@ -83,7 +88,7 @@ class ProductListConditionalAvailabilityPageSearchQueryExpanderPlugin extends Ab
      */
     protected function createWhitelistTermQuery(array $whitelistIds): Terms
     {
-        return new Terms(PageIndexMap::PRODUCT_LISTS_WHITELISTS, $whitelistIds);
+        return new Terms(ConditionalAvailabilityPeriodIndexMap::PRODUCT_LISTS_WHITELISTS, $whitelistIds);
     }
 
     /**

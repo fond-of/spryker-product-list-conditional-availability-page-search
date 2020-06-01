@@ -16,10 +16,6 @@
         <property name="whitelistIds" type="int[]" singular="whitelistId"/>
     </transfer>
 
-    <transfer name="PageMap">
-        <property name="productLists" type="ProductListMap"/>
-    </transfer>
-
     <transfer name="ConditionalAvailabilityPeriodPageSearch">
         <property name="fkProduct" type="int"/>
         <property name="productListMap" type="ProductListMap"/>
