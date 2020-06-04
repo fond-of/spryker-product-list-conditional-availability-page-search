@@ -11,7 +11,7 @@ use Spryker\Zed\Kernel\Business\AbstractFacade;
 class ProductListConditionalAvailabilityPageSearchFacade extends AbstractFacade implements ProductListConditionalAvailabilityPageSearchFacadeInterface
 {
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
