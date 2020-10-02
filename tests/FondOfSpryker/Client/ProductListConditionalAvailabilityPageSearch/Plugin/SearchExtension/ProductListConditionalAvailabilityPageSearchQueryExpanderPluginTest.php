@@ -11,6 +11,7 @@ use FondOfSpryker\Client\ProductListConditionalAvailabilityPageSearch\ProductLis
 use Generated\Shared\Transfer\CustomerProductListCollectionTransfer;
 use Generated\Shared\Transfer\CustomerTransfer;
 use InvalidArgumentException;
+use Spryker\Client\Kernel\AbstractFactory;
 use Spryker\Client\Search\Dependency\Plugin\QueryInterface;
 
 class ProductListConditionalAvailabilityPageSearchQueryExpanderPluginTest extends Unit
@@ -119,9 +120,9 @@ class ProductListConditionalAvailabilityPageSearchQueryExpanderPluginTest extend
             }
 
             /**
-             * @return \FondOfSpryker\Client\ProductListConditionalAvailabilityPageSearch\ProductListConditionalAvailabilityPageSearchFactory
+             * @return \Spryker\Client\Kernel\AbstractFactory
              */
-            public function getFactory(): ProductListConditionalAvailabilityPageSearchFactory
+            protected function getFactory(): AbstractFactory
             {
                 return $this->productListConditionalAvailabilityPageSearchFactory;
             }
