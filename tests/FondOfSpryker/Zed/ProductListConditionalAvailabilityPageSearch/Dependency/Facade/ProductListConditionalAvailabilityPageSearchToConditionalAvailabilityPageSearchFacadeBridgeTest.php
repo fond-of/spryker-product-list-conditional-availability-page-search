@@ -18,7 +18,7 @@ class ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityPageS
     protected $conditionalAvailabilityPageSearchFacadeInterfaceMock;
 
     /**
-     * @var int[]
+     * @var array<int>
      */
     protected $conditionalAvailabilityIds;
 
@@ -34,7 +34,7 @@ class ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityPageS
         $this->conditionalAvailabilityIds = [1];
 
         $this->productListConditionalAvailabilityPageSearchToConditionalAvailabilityPageSearchFacadeBridge = new ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityPageSearchFacadeBridge(
-            $this->conditionalAvailabilityPageSearchFacadeInterfaceMock
+            $this->conditionalAvailabilityPageSearchFacadeInterfaceMock,
         );
     }
 
@@ -48,7 +48,7 @@ class ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityPageS
             ->with($this->conditionalAvailabilityIds);
 
         $this->productListConditionalAvailabilityPageSearchToConditionalAvailabilityPageSearchFacadeBridge->publish(
-            $this->conditionalAvailabilityIds
+            $this->conditionalAvailabilityIds,
         );
     }
 }

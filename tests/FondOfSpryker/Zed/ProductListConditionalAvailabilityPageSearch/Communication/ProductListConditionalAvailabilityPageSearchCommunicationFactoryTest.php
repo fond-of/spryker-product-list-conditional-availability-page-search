@@ -77,7 +77,7 @@ class ProductListConditionalAvailabilityPageSearchCommunicationFactoryTest exten
 
         $this->assertInstanceOf(
             ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityPageSearchFacadeInterface::class,
-            $this->productListConditionalAvailabilityPageSearchCommunicationFactory->getConditionalAvailabilityPageSearchFacade()
+            $this->productListConditionalAvailabilityPageSearchCommunicationFactory->getConditionalAvailabilityPageSearchFacade(),
         );
     }
 
@@ -97,7 +97,7 @@ class ProductListConditionalAvailabilityPageSearchCommunicationFactoryTest exten
 
         $this->assertInstanceOf(
             ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityFacadeInterface::class,
-            $this->productListConditionalAvailabilityPageSearchCommunicationFactory->getConditionalAvailabilityFacade()
+            $this->productListConditionalAvailabilityPageSearchCommunicationFactory->getConditionalAvailabilityFacade(),
         );
     }
 
@@ -117,7 +117,7 @@ class ProductListConditionalAvailabilityPageSearchCommunicationFactoryTest exten
 
         $this->assertInstanceOf(
             ProductListConditionalAvailabilityPageSearchToEventBehaviorFacadeInterface::class,
-            $this->productListConditionalAvailabilityPageSearchCommunicationFactory->getEventBehaviorFacade()
+            $this->productListConditionalAvailabilityPageSearchCommunicationFactory->getEventBehaviorFacade(),
         );
     }
 }

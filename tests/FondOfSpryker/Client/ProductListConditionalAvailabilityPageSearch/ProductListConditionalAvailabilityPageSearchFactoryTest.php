@@ -56,7 +56,7 @@ class ProductListConditionalAvailabilityPageSearchFactoryTest extends Unit
 
         $this->assertInstanceOf(
             ProductListConditionalAvailabilityPageSearchToCustomerClientInterface::class,
-            $this->productListConditionalAvailabilityPageSearchFactory->getCustomerClient()
+            $this->productListConditionalAvailabilityPageSearchFactory->getCustomerClient(),
         );
     }
 }

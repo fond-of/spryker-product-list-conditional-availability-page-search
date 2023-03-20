@@ -18,7 +18,7 @@ class ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityFacad
     protected $conditionalAvailabilityFacadeInterfaceMock;
 
     /**
-     * @var int[]
+     * @var array<int>
      */
     protected $productConcreteIds;
 
@@ -34,7 +34,7 @@ class ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityFacad
         $this->productConcreteIds = [1];
 
         $this->productListConditionalAvailabilityPageSearchToConditionalAvailabilityFacadeBridge = new ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityFacadeBridge(
-            $this->conditionalAvailabilityFacadeInterfaceMock
+            $this->conditionalAvailabilityFacadeInterfaceMock,
         );
     }
 
@@ -50,8 +50,8 @@ class ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityFacad
 
         $this->assertIsArray(
             $this->productListConditionalAvailabilityPageSearchToConditionalAvailabilityFacadeBridge->getConditionalAvailabilityIdsByProductConcreteIds(
-                $this->productConcreteIds
-            )
+                $this->productConcreteIds,
+            ),
         );
     }
 }

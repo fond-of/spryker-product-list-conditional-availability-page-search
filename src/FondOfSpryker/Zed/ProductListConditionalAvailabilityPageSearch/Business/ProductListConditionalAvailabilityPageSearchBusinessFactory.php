@@ -16,19 +16,17 @@ class ProductListConditionalAvailabilityPageSearchBusinessFactory extends Abstra
     public function createConditionalAvailabilityPeriodPageSearchExpander(): ConditionalAvailabilityPeriodPageSearchExpanderInterface
     {
         return new ConditionalAvailabilityPeriodPageSearchExpander(
-            $this->getProductListFacade()
+            $this->getProductListFacade(),
         );
     }
 
     /**
-     * @throws
-     *
      * @return \FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Dependency\Facade\ProductListConditionalAvailabilityPageSearchToProductListFacadeInterface
      */
     protected function getProductListFacade(): ProductListConditionalAvailabilityPageSearchToProductListFacadeInterface
     {
         return $this->getProvidedDependency(
-            ProductListConditionalAvailabilityPageSearchDependencyProvider::FACADE_PRODUCT_LIST
+            ProductListConditionalAvailabilityPageSearchDependencyProvider::FACADE_PRODUCT_LIST,
         );
     }
 }

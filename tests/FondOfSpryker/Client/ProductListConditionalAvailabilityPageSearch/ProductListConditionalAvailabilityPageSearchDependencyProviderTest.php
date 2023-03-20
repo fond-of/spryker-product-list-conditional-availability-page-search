@@ -37,8 +37,8 @@ class ProductListConditionalAvailabilityPageSearchDependencyProviderTest extends
         $this->assertInstanceOf(
             Container::class,
             $this->productListConditionalAvailabilityPageSearchDependencyProvider->provideServiceLayerDependencies(
-                $this->containerMock
-            )
+                $this->containerMock,
+            ),
         );
     }
 }

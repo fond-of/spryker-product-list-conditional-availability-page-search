@@ -3,18 +3,19 @@
 namespace FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Communication\ConditionalAvailabilityPageSearchExtension;
 
 use Codeception\Test\Unit;
-use FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Business\ProductListConditionalAvailabilityPageSearchFacadeInterface;
+use FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Business\ProductListConditionalAvailabilityPageSearchFacade;
 use Generated\Shared\Transfer\ConditionalAvailabilityPeriodPageSearchTransfer;
+use Spryker\Zed\Kernel\Business\AbstractFacade;
 
-class ProductListPageDataExpanderPluginTest extends Unit
+class ProductListConditionalAvailabilityPeriodPageDataExpanderPluginTest extends Unit
 {
     /**
-     * @var \FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Communication\ConditionalAvailabilityPageSearchExtension\ProductListPageDataExpanderPlugin
+     * @var \FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Communication\ConditionalAvailabilityPageSearchExtension\ProductListConditionalAvailabilityPeriodPageDataExpanderPlugin
      */
     protected $productListPageDataExpanderPlugin;
 
     /**
-     * @var \PHPUnit\Framework\MockObject\MockObject|\FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Business\ProductListConditionalAvailabilityPageSearchFacadeInterface
+     * @var \PHPUnit\Framework\MockObject\MockObject|\FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Business\ProductListConditionalAvailabilityPageSearchFacade
      */
     protected $productListConditionalAvailabilityPageSearchFacadeInterfaceMock;
 
@@ -28,7 +29,7 @@ class ProductListPageDataExpanderPluginTest extends Unit
      */
     protected function _before(): void
     {
-        $this->productListConditionalAvailabilityPageSearchFacadeInterfaceMock = $this->getMockBuilder(ProductListConditionalAvailabilityPageSearchFacadeInterface::class)
+        $this->productListConditionalAvailabilityPageSearchFacadeInterfaceMock = $this->getMockBuilder(ProductListConditionalAvailabilityPageSearchFacade::class)
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -38,24 +39,24 @@ class ProductListPageDataExpanderPluginTest extends Unit
 
         $this->productListPageDataExpanderPlugin = new class (
             $this->productListConditionalAvailabilityPageSearchFacadeInterfaceMock
-        ) extends ProductListPageDataExpanderPlugin {
+        ) extends ProductListConditionalAvailabilityPeriodPageDataExpanderPlugin {
             /**
-             * @var \FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Business\ProductListConditionalAvailabilityPageSearchFacadeInterface
+             * @var \FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Business\ProductListConditionalAvailabilityPageSearchFacade
              */
             protected $productListConditionalAvailabilityPageSearchFacade;
 
             /**
-             * @param \FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Business\ProductListConditionalAvailabilityPageSearchFacadeInterface $productListConditionalAvailabilityPageSearchFacade
+             * @param \FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Business\ProductListConditionalAvailabilityPageSearchFacade $productListConditionalAvailabilityPageSearchFacade
              */
-            public function __construct(ProductListConditionalAvailabilityPageSearchFacadeInterface $productListConditionalAvailabilityPageSearchFacade)
+            public function __construct(ProductListConditionalAvailabilityPageSearchFacade $productListConditionalAvailabilityPageSearchFacade)
             {
                 $this->productListConditionalAvailabilityPageSearchFacade = $productListConditionalAvailabilityPageSearchFacade;
             }
 
             /**
-             * @return \FondOfSpryker\Zed\ProductListConditionalAvailabilityPageSearch\Business\ProductListConditionalAvailabilityPageSearchFacadeInterface
+             * @return \Spryker\Zed\Kernel\Business\AbstractFacade
              */
-            public function getFacade(): ProductListConditionalAvailabilityPageSearchFacadeInterface
+            protected function getFacade(): AbstractFacade
             {
                 return $this->productListConditionalAvailabilityPageSearchFacade;
             }
@@ -75,8 +76,8 @@ class ProductListPageDataExpanderPluginTest extends Unit
         $this->assertInstanceOf(
             ConditionalAvailabilityPeriodPageSearchTransfer::class,
             $this->productListPageDataExpanderPlugin->expand(
-                $this->conditionalAvailabilityPeriodPageSearchTransferMock
-            )
+                $this->conditionalAvailabilityPeriodPageSearchTransferMock,
+            ),
         );
     }
 }

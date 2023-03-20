@@ -13,7 +13,7 @@ class ProductListConditionalAvailabilityPageSearchFactory extends AbstractFactor
     public function getCustomerClient(): ProductListConditionalAvailabilityPageSearchToCustomerClientInterface
     {
         return $this->getProvidedDependency(
-            ProductListConditionalAvailabilityPageSearchDependencyProvider::CLIENT_CUSTOMER
+            ProductListConditionalAvailabilityPageSearchDependencyProvider::CLIENT_CUSTOMER,
         );
     }
 }

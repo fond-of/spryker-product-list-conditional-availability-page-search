@@ -43,14 +43,14 @@ class ProductListConditionalAvailabilityPageSearchEventSubscriberTest extends Un
                 [ProductListEvents::ENTITY_SPY_PRODUCT_LIST_PRODUCT_CONCRETE_UPDATE, new ProductListProductConcreteListener()],
                 [ProductListEvents::ENTITY_SPY_PRODUCT_LIST_PRODUCT_CONCRETE_DELETE, new ProductListProductConcreteListener()],
                 [ProductListEvents::PRODUCT_LIST_PRODUCT_CONCRETE_PUBLISH, new ProductListProductConcreteListener()],
-                [ProductListEvents::PRODUCT_LIST_PRODUCT_CONCRETE_UNPUBLISH, new ProductListProductConcreteListener()]
+                [ProductListEvents::PRODUCT_LIST_PRODUCT_CONCRETE_UNPUBLISH, new ProductListProductConcreteListener()],
             )->willReturnSelf();
 
         $this->assertInstanceOf(
             EventCollectionInterface::class,
             $this->productListConditionalAvailabilityPageSearchEventSubscriber->getSubscribedEvents(
-                $this->eventCollectionInterfaceMock
-            )
+                $this->eventCollectionInterfaceMock,
+            ),
         );
     }
 }

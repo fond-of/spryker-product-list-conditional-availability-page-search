@@ -37,8 +37,8 @@ class ProductListConditionalAvailabilityPageSearchDependencyProviderTest extends
         $this->assertInstanceOf(
             Container::class,
             $this->productListConditionalAvailabilityPageSearchDependencyProvider->provideBusinessLayerDependencies(
-                $this->containerMock
-            )
+                $this->containerMock,
+            ),
         );
     }
 
@@ -50,8 +50,8 @@ class ProductListConditionalAvailabilityPageSearchDependencyProviderTest extends
         $this->assertInstanceOf(
             Container::class,
             $this->productListConditionalAvailabilityPageSearchDependencyProvider->provideCommunicationLayerDependencies(
-                $this->containerMock
-            )
+                $this->containerMock,
+            ),
         );
     }
 }

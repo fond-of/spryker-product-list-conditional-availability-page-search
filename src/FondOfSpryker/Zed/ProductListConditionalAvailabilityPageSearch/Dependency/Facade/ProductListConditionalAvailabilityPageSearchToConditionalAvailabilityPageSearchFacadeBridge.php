@@ -21,7 +21,7 @@ class ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityPageS
     }
 
     /**
-     * @param int[] $conditionalAvailabilityIds
+     * @param array<int> $conditionalAvailabilityIds
      *
      * @return void
      */

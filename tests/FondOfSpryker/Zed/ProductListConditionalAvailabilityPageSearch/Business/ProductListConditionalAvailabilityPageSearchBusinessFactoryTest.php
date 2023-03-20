@@ -58,7 +58,7 @@ class ProductListConditionalAvailabilityPageSearchBusinessFactoryTest extends Un
 
         $this->assertInstanceOf(
             ConditionalAvailabilityPeriodPageSearchExpanderInterface::class,
-            $this->productListConditionalAvailabilityPageSearchBusinessFactory->createConditionalAvailabilityPeriodPageSearchExpander()
+            $this->productListConditionalAvailabilityPageSearchBusinessFactory->createConditionalAvailabilityPeriodPageSearchExpander(),
         );
     }
 }
