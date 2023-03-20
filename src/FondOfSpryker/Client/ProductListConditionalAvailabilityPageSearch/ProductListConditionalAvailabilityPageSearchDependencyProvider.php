@@ -8,6 +8,9 @@ use Spryker\Client\Kernel\Container;
 
 class ProductListConditionalAvailabilityPageSearchDependencyProvider extends AbstractDependencyProvider
 {
+    /**
+     * @var string
+     */
     public const CLIENT_CUSTOMER = 'CLIENT_CUSTOMER';
 
     /**
@@ -33,7 +36,7 @@ class ProductListConditionalAvailabilityPageSearchDependencyProvider extends Abs
     {
         $container[static::CLIENT_CUSTOMER] = static function (Container $container) {
             return new ProductListConditionalAvailabilityPageSearchToCustomerClientBridge(
-                $container->getLocator()->customer()->client()
+                $container->getLocator()->customer()->client(),
             );
         };
 

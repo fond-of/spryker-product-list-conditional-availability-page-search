@@ -20,7 +20,7 @@ class ProductListConditionalAvailabilityPeriodPageDataExpanderPlugin extends Abs
         ConditionalAvailabilityPeriodPageSearchTransfer $conditionalAvailabilityPeriodPageSearchTransfer
     ): ConditionalAvailabilityPeriodPageSearchTransfer {
         return $this->getFacade()->expandConditionalAvailabilityPeriodPageSearchTransferWithProductLists(
-            $conditionalAvailabilityPeriodPageSearchTransfer
+            $conditionalAvailabilityPeriodPageSearchTransfer,
         );
     }
 }

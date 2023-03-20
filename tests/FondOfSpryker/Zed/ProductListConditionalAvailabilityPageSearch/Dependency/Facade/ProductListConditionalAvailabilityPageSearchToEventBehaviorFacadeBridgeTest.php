@@ -19,7 +19,7 @@ class ProductListConditionalAvailabilityPageSearchToEventBehaviorFacadeBridgeTes
     protected $eventBehaviorFacadeInterfaceMock;
 
     /**
-     * @var \Generated\Shared\Transfer\EventEntityTransfer[]
+     * @var array<\Generated\Shared\Transfer\EventEntityTransfer>
      */
     protected $eventTransfers;
 
@@ -53,7 +53,7 @@ class ProductListConditionalAvailabilityPageSearchToEventBehaviorFacadeBridgeTes
         $this->foreignKeyColumnName = 'foreign-key-column-name';
 
         $this->productListConditionalAvailabilityPageSearchToEventBehaviorFacadeBridge = new ProductListConditionalAvailabilityPageSearchToEventBehaviorFacadeBridge(
-            $this->eventBehaviorFacadeInterfaceMock
+            $this->eventBehaviorFacadeInterfaceMock,
         );
     }
 
@@ -70,8 +70,8 @@ class ProductListConditionalAvailabilityPageSearchToEventBehaviorFacadeBridgeTes
         $this->assertIsArray(
             $this->productListConditionalAvailabilityPageSearchToEventBehaviorFacadeBridge->getEventTransferForeignKeys(
                 $this->eventTransfers,
-                $this->foreignKeyColumnName
-            )
+                $this->foreignKeyColumnName,
+            ),
         );
     }
 }

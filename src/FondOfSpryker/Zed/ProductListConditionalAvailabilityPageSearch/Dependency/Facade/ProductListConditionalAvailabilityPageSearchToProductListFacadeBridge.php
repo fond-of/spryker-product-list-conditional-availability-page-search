@@ -22,7 +22,7 @@ class ProductListConditionalAvailabilityPageSearchToProductListFacadeBridge impl
     /**
      * @param int $idProduct
      *
-     * @return int[]
+     * @return array<int>
      */
     public function getProductWhitelistIdsByIdProduct(int $idProduct): array
     {
@@ -32,7 +32,7 @@ class ProductListConditionalAvailabilityPageSearchToProductListFacadeBridge impl
     /**
      * @param int $idProduct
      *
-     * @return int[]
+     * @return array<int>
      */
     public function getProductBlacklistIdsByIdProduct(int $idProduct): array
     {

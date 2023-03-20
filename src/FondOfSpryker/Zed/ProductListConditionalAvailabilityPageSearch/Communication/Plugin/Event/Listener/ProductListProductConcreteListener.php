@@ -16,17 +16,17 @@ class ProductListProductConcreteListener extends AbstractPlugin implements Event
     use DatabaseTransactionHandlerTrait;
 
     /**
-     * @param \Spryker\Shared\Kernel\Transfer\TransferInterface[] $transfers
+     * @param array<\Generated\Shared\Transfer\EventEntityTransfer> $eventEntityTransfers
      * @param string $eventName
      *
      * @return void
      */
-    public function handleBulk(array $transfers, $eventName): void
+    public function handleBulk(array $eventEntityTransfers, $eventName): void
     {
         $this->preventTransaction();
 
         $concreteIds = $this->getFactory()->getEventBehaviorFacade()
-            ->getEventTransferForeignKeys($transfers, SpyProductListProductConcreteTableMap::COL_FK_PRODUCT);
+            ->getEventTransferForeignKeys($eventEntityTransfers, SpyProductListProductConcreteTableMap::COL_FK_PRODUCT);
 
         $conditionalAvailabilityIds = $this->getFactory()->getConditionalAvailabilityFacade()
             ->getConditionalAvailabilityIdsByProductConcreteIds($concreteIds);

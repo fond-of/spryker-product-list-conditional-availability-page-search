@@ -37,7 +37,7 @@ class ProductListConditionalAvailabilityPageSearchToCustomerClientBridgeTest ext
             ->getMock();
 
         $this->productListConditionalAvailabilityPageSearchToCustomerClientBridge = new ProductListConditionalAvailabilityPageSearchToCustomerClientBridge(
-            $this->customerClientInterfaceMock
+            $this->customerClientInterfaceMock,
         );
     }
 
@@ -52,7 +52,7 @@ class ProductListConditionalAvailabilityPageSearchToCustomerClientBridgeTest ext
 
         $this->assertInstanceOf(
             CustomerTransfer::class,
-            $this->productListConditionalAvailabilityPageSearchToCustomerClientBridge->getCustomer()
+            $this->productListConditionalAvailabilityPageSearchToCustomerClientBridge->getCustomer(),
         );
     }
 }

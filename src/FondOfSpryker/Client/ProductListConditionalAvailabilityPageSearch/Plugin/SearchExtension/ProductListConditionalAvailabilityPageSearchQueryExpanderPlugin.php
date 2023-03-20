@@ -92,7 +92,7 @@ class ProductListConditionalAvailabilityPageSearchQueryExpanderPlugin extends Ab
     }
 
     /**
-     * @return int[]
+     * @return array<int>
      */
     protected function getBlacklistIds(): array
     {
@@ -106,7 +106,7 @@ class ProductListConditionalAvailabilityPageSearchQueryExpanderPlugin extends Ab
     }
 
     /**
-     * @return int[]
+     * @return array<int>
      */
     protected function getWhitelistIds(): array
     {
@@ -164,7 +164,7 @@ class ProductListConditionalAvailabilityPageSearchQueryExpanderPlugin extends Ab
             throw new InvalidArgumentException(sprintf(
                 'Product List Query Expander available only with %s, got: %s',
                 BoolQuery::class,
-                get_class($boolQuery)
+                get_class($boolQuery),
             ));
         }
 

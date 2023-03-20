@@ -35,12 +35,12 @@ class ConditionalAvailabilityPeriodPageSearchExpanderTest extends Unit
     protected $fkProduct;
 
     /**
-     * @var int[]
+     * @var array<int>
      */
     protected $whitelistIds;
 
     /**
-     * @var int[]
+     * @var array<int>
      */
     protected $blacklistIds;
 
@@ -68,7 +68,7 @@ class ConditionalAvailabilityPeriodPageSearchExpanderTest extends Unit
         $this->blacklistIds = [3];
 
         $this->conditionalAvailabilityPeriodPageSearchExpander = new ConditionalAvailabilityPeriodPageSearchExpander(
-            $this->productListConditionalAvailabilityPageSearchToProductListFacadeInterfaceMock
+            $this->productListConditionalAvailabilityPageSearchToProductListFacadeInterfaceMock,
         );
     }
 
@@ -112,8 +112,8 @@ class ConditionalAvailabilityPeriodPageSearchExpanderTest extends Unit
         $this->assertInstanceOf(
             ConditionalAvailabilityPeriodPageSearchTransfer::class,
             $this->conditionalAvailabilityPeriodPageSearchExpander->expandWithProductLists(
-                $this->conditionalAvailabilityPeriodPageSearchTransferMock
-            )
+                $this->conditionalAvailabilityPeriodPageSearchTransferMock,
+            ),
         );
     }
 
@@ -157,8 +157,8 @@ class ConditionalAvailabilityPeriodPageSearchExpanderTest extends Unit
         $this->assertInstanceOf(
             ConditionalAvailabilityPeriodPageSearchTransfer::class,
             $this->conditionalAvailabilityPeriodPageSearchExpander->expandWithProductLists(
-                $this->conditionalAvailabilityPeriodPageSearchTransferMock
-            )
+                $this->conditionalAvailabilityPeriodPageSearchTransferMock,
+            ),
         );
     }
 }

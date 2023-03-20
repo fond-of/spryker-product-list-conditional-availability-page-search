@@ -33,15 +33,15 @@ class ConditionalAvailabilityPeriodPageSearchExpander implements ConditionalAvai
         $conditionalAvailabilityPeriodPageSearchTransfer->requireFkProduct();
 
         $conditionalAvailabilityPeriodPageSearchTransfer = $this->sanitize(
-            $conditionalAvailabilityPeriodPageSearchTransfer
+            $conditionalAvailabilityPeriodPageSearchTransfer,
         );
 
         $conditionalAvailabilityPeriodPageSearchTransfer = $this->expandWithWhitelistIds(
-            $conditionalAvailabilityPeriodPageSearchTransfer
+            $conditionalAvailabilityPeriodPageSearchTransfer,
         );
 
         $conditionalAvailabilityPeriodPageSearchTransfer = $this->expandWithBlacklistIds(
-            $conditionalAvailabilityPeriodPageSearchTransfer
+            $conditionalAvailabilityPeriodPageSearchTransfer,
         );
 
         return $conditionalAvailabilityPeriodPageSearchTransfer;

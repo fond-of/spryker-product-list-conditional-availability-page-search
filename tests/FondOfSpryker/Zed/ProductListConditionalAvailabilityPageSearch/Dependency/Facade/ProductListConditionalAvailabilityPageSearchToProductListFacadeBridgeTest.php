@@ -34,7 +34,7 @@ class ProductListConditionalAvailabilityPageSearchToProductListFacadeBridgeTest 
         $this->idProduct = 1;
 
         $this->productListConditionalAvailabilityPageSearchToProductListFacadeBridge = new ProductListConditionalAvailabilityPageSearchToProductListFacadeBridge(
-            $this->productListFacadeInterfaceMock
+            $this->productListFacadeInterfaceMock,
         );
     }
 
@@ -50,8 +50,8 @@ class ProductListConditionalAvailabilityPageSearchToProductListFacadeBridgeTest 
 
         $this->assertIsArray(
             $this->productListConditionalAvailabilityPageSearchToProductListFacadeBridge->getProductWhitelistIdsByIdProduct(
-                $this->idProduct
-            )
+                $this->idProduct,
+            ),
         );
     }
 
@@ -67,8 +67,8 @@ class ProductListConditionalAvailabilityPageSearchToProductListFacadeBridgeTest 
 
         $this->assertIsArray(
             $this->productListConditionalAvailabilityPageSearchToProductListFacadeBridge->getProductBlacklistIdsByIdProduct(
-                $this->idProduct
-            )
+                $this->idProduct,
+            ),
         );
     }
 }

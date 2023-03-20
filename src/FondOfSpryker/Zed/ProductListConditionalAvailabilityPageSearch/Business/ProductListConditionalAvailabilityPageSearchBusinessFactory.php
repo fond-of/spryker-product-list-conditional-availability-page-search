@@ -16,7 +16,7 @@ class ProductListConditionalAvailabilityPageSearchBusinessFactory extends Abstra
     public function createConditionalAvailabilityPeriodPageSearchExpander(): ConditionalAvailabilityPeriodPageSearchExpanderInterface
     {
         return new ConditionalAvailabilityPeriodPageSearchExpander(
-            $this->getProductListFacade()
+            $this->getProductListFacade(),
         );
     }
 
@@ -26,7 +26,7 @@ class ProductListConditionalAvailabilityPageSearchBusinessFactory extends Abstra
     protected function getProductListFacade(): ProductListConditionalAvailabilityPageSearchToProductListFacadeInterface
     {
         return $this->getProvidedDependency(
-            ProductListConditionalAvailabilityPageSearchDependencyProvider::FACADE_PRODUCT_LIST
+            ProductListConditionalAvailabilityPageSearchDependencyProvider::FACADE_PRODUCT_LIST,
         );
     }
 }

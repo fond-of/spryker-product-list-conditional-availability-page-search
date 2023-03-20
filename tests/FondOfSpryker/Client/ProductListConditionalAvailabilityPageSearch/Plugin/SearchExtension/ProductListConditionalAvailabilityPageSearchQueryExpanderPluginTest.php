@@ -12,7 +12,7 @@ use Generated\Shared\Transfer\CustomerProductListCollectionTransfer;
 use Generated\Shared\Transfer\CustomerTransfer;
 use InvalidArgumentException;
 use Spryker\Client\Kernel\AbstractFactory;
-use Spryker\Client\Search\Dependency\Plugin\QueryInterface;
+use Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface;
 
 class ProductListConditionalAvailabilityPageSearchQueryExpanderPluginTest extends Unit
 {
@@ -22,7 +22,7 @@ class ProductListConditionalAvailabilityPageSearchQueryExpanderPluginTest extend
     protected $productListConditionalAvailabilityPageSearchQueryExpanderPlugin;
 
     /**
-     * @var \PHPUnit\Framework\MockObject\MockObject|\Spryker\Client\Search\Dependency\Plugin\QueryInterface
+     * @var \PHPUnit\Framework\MockObject\MockObject|\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface
      */
     protected $queryInterfaceMock;
 
@@ -52,7 +52,7 @@ class ProductListConditionalAvailabilityPageSearchQueryExpanderPluginTest extend
     protected $customerProductListCollectionTransferMock;
 
     /**
-     * @var int[]
+     * @var array<int>
      */
     protected $blacklistIds;
 
@@ -62,7 +62,7 @@ class ProductListConditionalAvailabilityPageSearchQueryExpanderPluginTest extend
     protected $boolQueryMock;
 
     /**
-     * @var int[]
+     * @var array<int>
      */
     protected $whitelistIds;
 
@@ -193,8 +193,8 @@ class ProductListConditionalAvailabilityPageSearchQueryExpanderPluginTest extend
         $this->assertInstanceOf(
             QueryInterface::class,
             $this->productListConditionalAvailabilityPageSearchQueryExpanderPlugin->expandQuery(
-                $this->queryInterfaceMock
-            )
+                $this->queryInterfaceMock,
+            ),
         );
     }
 
@@ -230,8 +230,8 @@ class ProductListConditionalAvailabilityPageSearchQueryExpanderPluginTest extend
         $this->assertInstanceOf(
             QueryInterface::class,
             $this->productListConditionalAvailabilityPageSearchQueryExpanderPlugin->expandQuery(
-                $this->queryInterfaceMock
-            )
+                $this->queryInterfaceMock,
+            ),
         );
     }
 
@@ -255,8 +255,8 @@ class ProductListConditionalAvailabilityPageSearchQueryExpanderPluginTest extend
         $this->assertInstanceOf(
             QueryInterface::class,
             $this->productListConditionalAvailabilityPageSearchQueryExpanderPlugin->expandQuery(
-                $this->queryInterfaceMock
-            )
+                $this->queryInterfaceMock,
+            ),
         );
     }
 
@@ -284,8 +284,8 @@ class ProductListConditionalAvailabilityPageSearchQueryExpanderPluginTest extend
         $this->assertInstanceOf(
             QueryInterface::class,
             $this->productListConditionalAvailabilityPageSearchQueryExpanderPlugin->expandQuery(
-                $this->queryInterfaceMock
-            )
+                $this->queryInterfaceMock,
+            ),
         );
     }
 
@@ -320,12 +320,12 @@ class ProductListConditionalAvailabilityPageSearchQueryExpanderPluginTest extend
 
         try {
             $this->productListConditionalAvailabilityPageSearchQueryExpanderPlugin->expandQuery(
-                $this->queryInterfaceMock
+                $this->queryInterfaceMock,
             );
         } catch (InvalidArgumentException $exception) {
             $this->assertInstanceOf(
                 InvalidArgumentException::class,
-                $exception
+                $exception,
             );
         }
     }

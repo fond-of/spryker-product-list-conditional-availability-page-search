@@ -76,8 +76,8 @@ class ProductListConditionalAvailabilityPeriodPageDataExpanderPluginTest extends
         $this->assertInstanceOf(
             ConditionalAvailabilityPeriodPageSearchTransfer::class,
             $this->productListPageDataExpanderPlugin->expand(
-                $this->conditionalAvailabilityPeriodPageSearchTransferMock
-            )
+                $this->conditionalAvailabilityPeriodPageSearchTransferMock,
+            ),
         );
     }
 }

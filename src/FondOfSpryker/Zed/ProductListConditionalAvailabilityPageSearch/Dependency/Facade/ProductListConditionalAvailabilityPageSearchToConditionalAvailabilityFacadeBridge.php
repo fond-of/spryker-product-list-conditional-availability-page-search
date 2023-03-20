@@ -20,14 +20,14 @@ class ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityFacad
     }
 
     /**
-     * @param int[] $productConcreteIds
+     * @param array<int> $productConcreteIds
      *
-     * @return int[]
+     * @return array<int>
      */
     public function getConditionalAvailabilityIdsByProductConcreteIds(array $productConcreteIds): array
     {
         return $this->conditionalAvailabilityFacade->getConditionalAvailabilityIdsByProductConcreteIds(
-            $productConcreteIds
+            $productConcreteIds,
         );
     }
 }

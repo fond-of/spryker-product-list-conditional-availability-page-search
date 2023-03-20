@@ -66,8 +66,8 @@ class ProductListConditionalAvailabilityPageSearchFacadeTest extends Unit
         $this->assertInstanceOf(
             ConditionalAvailabilityPeriodPageSearchTransfer::class,
             $this->productListConditionalAvailabilityPageSearchFacade->expandConditionalAvailabilityPeriodPageSearchTransferWithProductLists(
-                $this->conditionalAvailabilityPeriodPageSearchTransferMock
-            )
+                $this->conditionalAvailabilityPeriodPageSearchTransferMock,
+            ),
         );
     }
 }

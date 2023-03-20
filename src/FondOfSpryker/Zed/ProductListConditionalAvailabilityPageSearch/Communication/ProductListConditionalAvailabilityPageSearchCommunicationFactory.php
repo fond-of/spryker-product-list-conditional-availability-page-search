@@ -19,7 +19,7 @@ class ProductListConditionalAvailabilityPageSearchCommunicationFactory extends A
     public function getConditionalAvailabilityPageSearchFacade(): ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityPageSearchFacadeInterface
     {
         return $this->getProvidedDependency(
-            ProductListConditionalAvailabilityPageSearchDependencyProvider::FACADE_CONDITIONAL_AVAILABILITY_PAGE_SEARCH
+            ProductListConditionalAvailabilityPageSearchDependencyProvider::FACADE_CONDITIONAL_AVAILABILITY_PAGE_SEARCH,
         );
     }
 
@@ -29,7 +29,7 @@ class ProductListConditionalAvailabilityPageSearchCommunicationFactory extends A
     public function getConditionalAvailabilityFacade(): ProductListConditionalAvailabilityPageSearchToConditionalAvailabilityFacadeInterface
     {
         return $this->getProvidedDependency(
-            ProductListConditionalAvailabilityPageSearchDependencyProvider::FACADE_CONDITIONAL_AVAILABILITY
+            ProductListConditionalAvailabilityPageSearchDependencyProvider::FACADE_CONDITIONAL_AVAILABILITY,
         );
     }
 
@@ -39,7 +39,7 @@ class ProductListConditionalAvailabilityPageSearchCommunicationFactory extends A
     public function getEventBehaviorFacade(): ProductListConditionalAvailabilityPageSearchToEventBehaviorFacadeInterface
     {
         return $this->getProvidedDependency(
-            ProductListConditionalAvailabilityPageSearchDependencyProvider::FACADE_EVENT_BEHAVIOR
+            ProductListConditionalAvailabilityPageSearchDependencyProvider::FACADE_EVENT_BEHAVIOR,
         );
     }
 }

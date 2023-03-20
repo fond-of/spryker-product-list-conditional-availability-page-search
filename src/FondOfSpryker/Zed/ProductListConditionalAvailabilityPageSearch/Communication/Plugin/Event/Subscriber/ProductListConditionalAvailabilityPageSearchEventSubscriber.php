@@ -39,7 +39,7 @@ class ProductListConditionalAvailabilityPageSearchEventSubscriber extends Abstra
     {
         $eventCollection->addListenerQueued(
             ProductListEvents::ENTITY_SPY_PRODUCT_LIST_PRODUCT_CONCRETE_CREATE,
-            new ProductListProductConcreteListener()
+            new ProductListProductConcreteListener(),
         );
     }
 
@@ -52,7 +52,7 @@ class ProductListConditionalAvailabilityPageSearchEventSubscriber extends Abstra
     {
         $eventCollection->addListenerQueued(
             ProductListEvents::ENTITY_SPY_PRODUCT_LIST_PRODUCT_CONCRETE_UPDATE,
-            new ProductListProductConcreteListener()
+            new ProductListProductConcreteListener(),
         );
     }
 
@@ -65,7 +65,7 @@ class ProductListConditionalAvailabilityPageSearchEventSubscriber extends Abstra
     {
         $eventCollection->addListenerQueued(
             ProductListEvents::ENTITY_SPY_PRODUCT_LIST_PRODUCT_CONCRETE_DELETE,
-            new ProductListProductConcreteListener()
+            new ProductListProductConcreteListener(),
         );
     }
 
@@ -78,7 +78,7 @@ class ProductListConditionalAvailabilityPageSearchEventSubscriber extends Abstra
     {
         $eventCollection->addListenerQueued(
             ProductListEvents::PRODUCT_LIST_PRODUCT_CONCRETE_PUBLISH,
-            new ProductListProductConcreteListener()
+            new ProductListProductConcreteListener(),
         );
     }
 
@@ -91,7 +91,7 @@ class ProductListConditionalAvailabilityPageSearchEventSubscriber extends Abstra
     {
         $eventCollection->addListenerQueued(
             ProductListEvents::PRODUCT_LIST_PRODUCT_CONCRETE_UNPUBLISH,
-            new ProductListProductConcreteListener()
+            new ProductListProductConcreteListener(),
         );
     }
 }

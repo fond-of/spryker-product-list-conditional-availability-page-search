@@ -7,8 +7,14 @@ use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 
 class ProductListConditionalAvailabilityPeriodPageSearchDataExpanderPlugin extends AbstractPlugin implements ConditionalAvailabilityPeriodPageSearchDataExpanderPluginInterface
 {
+    /**
+     * @var string
+     */
     protected const DATA_KEY_PRODUCT_LIST_MAP = 'product_list_map';
 
+    /**
+     * @var string
+     */
     protected const SEARCH_DATA_KEY_PRODUCT_LISTS = 'product-lists';
 
     /**
